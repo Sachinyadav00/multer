@@ -6,7 +6,7 @@ const logout = (req, res) => {
     });
 
     res.status(200).json({
-      message: "Logout successfully",
+      message: "Logout successfully done .",
     });
   } catch (err) {
     res.status(500).json({

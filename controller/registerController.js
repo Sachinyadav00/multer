@@ -9,7 +9,7 @@ const register = async (req, res) => {
 
     if (existingUser) {
       return res.status(409).json({
-        message: "Email already in use.",
+        message: "Email already exist.",
       });
     }
 
@@ -22,7 +22,7 @@ const register = async (req, res) => {
       message: "Registered Successfully",
     });
   } catch (err) {
-    console.log(err);
+    console.log("Register error : ", err);
     res.status(500).json({
       message: "Internal Server error",
     });
